@@ -3,7 +3,7 @@
 /* week 1 */
 
 /* Animation property */
-button {
+.figure1 {
   animation: wiggle 2s linear infinite;
 }
 
