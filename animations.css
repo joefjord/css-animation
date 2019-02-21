@@ -3,9 +3,7 @@
 /* week 1 */
 
 /* Animation property */
-.figure1 {
-  animation: wiggle 2s linear infinite;
-}
+
 
 /* Keyframes */
 @keyframes wiggle {
@@ -37,12 +35,10 @@
   position: relative;
   left: calc(50% - 3em);
   /* top: calc(50% - 2em); */
-
   margin-top: 25px;
   margin-bottom: 35px;
   height: 4em;
   width: 7em;
-
   background: #444;
   background: linear-gradient(top, #555, #333);
   border: none;
@@ -52,6 +48,7 @@
   font-family: Helvetica, Arial, Sans-serif;
   font-size: 1em;
   transform-origin: 50% 5em;
+  animation: wiggle 2s linear infinite;
 }
 
 .center {
