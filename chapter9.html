@@ -1,0 +1,91 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<title>CSS Animation</title>
+		<link type="text/css" rel="stylesheet" href="nav.css">
+		<link type="text/css" rel="stylesheet" href="style.css">
+		<link type="text/css" rel="stylesheet" href="animations.css"
+		<link href="https://fonts.googleapis.com/css?family=Cardo:400,400i|Montserrat:400,700" rel="stylesheet">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+
+  <body>
+		<header class="flex-container">
+
+			<h1><span class="inBox">CSS</span>Animation</h1>
+<!--
+navigation
+-->
+			<section class="app-bar promote-layer">
+					<button class="menu">
+							<img class="menu-icon" src="images/menu-button-icon.png">
+							<img class="close-icon" src="images/close-button-icon.png">
+					</button>
+			</section>
+
+			<nav class="navdrawer-container">
+				<ul >
+						<li><a href="index.html">CHAPTER 1 - intro</a></li>
+						<li><a href="chapter2.html">CHAPTER 2</a></li>
+						<li><a href="chapter3.html">CHAPTER 3</a></li>
+						<li><a href="chapter4.html">CHAPTER 4</a></li>
+						<li><a href="chapter5.html">CHAPTER 5</a></li>
+						<li><a href="chapter6.html">CHAPTER 6</a></li>
+						<li><a href="chapter7.html">CHAPTER 7</a></li>
+						<li><a href="chapter8.html">CHAPTER 8</a></li>
+						<li><a href="chapter9.html">CHAPTER 9</a></li>
+						<li><a></a></li>
+				</ul>
+			</nav>
+
+
+<!--
+end navigation
+-->
+
+		</header>
+
+		<section class="content">
+			<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/Ozf9DBfaBGT8Q" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/not-today-satan-Ozf9DBfaBGT8Q">via GIPHY</a></p>
+		</section>
+
+		<footer>
+
+		</footer>
+
+		<script>var navdrawerContainer = document.querySelector('.navdrawer-container');
+	var appbarElement = document.querySelector('.app-bar');
+	var darkbgElement = document.querySelector('.navdrawer-bg');
+
+	var menuBtn = document.querySelector('.menu');
+	menuBtn.addEventListener('click', function() {
+		var isOpen = navdrawerContainer.classList.contains('open');
+		if(isOpen) {
+			appbarElement.classList.remove('open');
+			navdrawerContainer.classList.remove('open');
+			darkbgElement.classList.remove('open');
+		} else {
+			appbarElement.classList.add('open');
+			navdrawerContainer.classList.add('open');
+			darkbgElement.classList.add('open');
+		}
+	}, true);
+
+		</script>
+
+		<script>var menuBtn = document.querySelector('.menu');
+	menuBtn.addEventListener('click', function() {
+		sampleCompleted('appbar-navdrawer-bottombar-sample.html-menuclick');
+	}, true);
+
+	var bottomBtns = document.querySelectorAll('.bottom-bar > button');
+	for(var i = 0; i < bottomBtns.length; i++) {
+		bottomBtns[i].addEventListener('click', bottomBarBtnClick, true);
+	}
+
+	function bottomBarBtnClick() {
+		sampleCompleted('appbar-navdrawer-bottombar-sample.html-bottombarbtnclick');
+	}</script>
+  </body>
+
+</html>
