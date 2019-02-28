@@ -46,7 +46,68 @@ end navigation
 		</header>
 
 		<section class="content">
-			<div class="placeholder" style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/Ozf9DBfaBGT8Q" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/not-today-satan-Ozf9DBfaBGT8Q">via GIPHY</a></p>
+			<h2>Animation</h2>
+
+			<p>So far we’ve discussed why we animate, found some sources of inspiration, looked at tools and sites we might find useful for development, and learned what transitions are.</p>
+
+			<p>Now, I'll introduce the animation property.</p>
+
+			<h3>Animations in the Browser</h3>
+
+			<p>Transitions and animations are similar. Both take the form of a CSS property, and have duration, delay and other ways of controlling how the browser creates the movement.
+			</p>
+
+			<p>While transitions are all about smoothing the change from state A to state B, animations are a way to describe multiple steps.</p>
+
+			<img class="center" alt="list animation gif" src="images/chapter3/01.gif" style="margin-bottom: 0;">
+
+			<p class="center"><small>Transitions: A to B</small></p>
+
+			<img class="center" alt="list animation gif" src="images/chapter3/02.png" style="margin-bottom: 0;">
+
+	 	 <p class="center"><small>Animations: A to B to C</small></p>
+
+			<p>Animations are useful for more complex movement in the browser. In the above example, there are 3 states (A, B and C). A transition would only go from A to C while an animation allows us to specify what step B looks like and make sure the animation follows all three steps.</p>
+
+			<p>Animations also behave a little differently. They can begin automatically. While a transition might require adding a class or a change of state such as hovering, animations can start when the page loads.</p>
+
+			<p>This means that if telling a story or drawing attention to something on a page, animations can be a good choice.</p>
+
+
+			<h3>Examples</h3>
+
+			<p>The “Save” button movement we see on Codepen is a good example of a practical animation.</p>
+
+			<img class="center" alt="list animation gif" src="images/chapter3/03.gif" style="margin-bottom: -50;">
+
+	 	 <p class="center"><a href="http://codepen.io/donovanh/pen/KwEQdQ"><small>Save button on CodePen</small></a></p>
+
+
+			<p>It does a great job helping people notice the button.</p>
+
+			<p>The effect is made up of a series of keyframes that tell the browser to shake the button from left to right. We’ll dig more into keyframes in greater depth in the next class period.</p>
+
+			<p>Another example is the landing page for <a href="https://get.fabric.io/">Fabric</a>, an app building platform from Twitter. CSS Animation is used nicely here to help communicate the modular aspect of Fabric, and establish credibility at the same time:</p>
+
+			<img class="center" style="display: block;" alt="animated navigation banner gif" src="images/chapter3/04.gif">
+
+			<p>Lastly, an example from a conference teaser site. This is a CSS Mac Plus, created to show off the welcome message on <a href="http://theweb.is/">theWeb.is </a> teaser site.</p>
+
+			<img class="center" style="display: block;" alt="animated navigation banner gif" src="images/chapter3/05.gif">
+
+			<h3>Transitions vs. Animations</h3>
+
+			<p>Transitions are when the browser animates from one state to another (A to B). They’re usually triggered by an action such hovering over an element, or adding or removing a class using JavaScript.</p>
+
+			<p>Animations are more involved, and let you create sequences of animations with as many keyframes as you need along the way. They trigger automatically, and can loop.</p>
+
+			<img class="center" style="display: block;" alt="animated navigation banner gif" src="images/chapter3/06.gif">
+
+			<h3>Homework</h3>
+
+			<p>Can you think of ways animations might be used on your web pages? Keep an eye open for animation when browsing. Look out for when something moves in a way that calls attention to itself. In these cases it’s usually an animation.</p>
+
+
 		</section>
 
 		<footer>
