@@ -20,6 +20,10 @@ h1, h2, h3, h4, h5, h6, button, a {
   font-family: "Montserrat";
 }
 
+code {
+  font-family: monospace; 
+}
+
 .inline-link {
   font-family: "Cardo", serif;
   font-size: 1em;

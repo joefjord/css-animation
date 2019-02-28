@@ -46,8 +46,73 @@ end navigation
 		</header>
 
 		<section class="content">
-			<div class="placeholder" style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/Ozf9DBfaBGT8Q" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/not-today-satan-Ozf9DBfaBGT8Q">via GIPHY</a></p>
+			<h2>Transitions in action</h2>
+
+			<p>Now that we have introduced the transition and animation properties, it’s time to delve further into transitions and see some code!</p>
+
+			<h3>Transitions</h3>
+
+			<p>Transitions take place in the browser when an element changes from one state to another. The browser draws the frames between each state automatically to create movement.
+			</p>
+
+			<p>A transition is a property in CSS. Just as you’d give an element a height, width, or border, we give elements transitions too.</p>
+
+			<p>We can write a transition in CSS like this:</p>
+
+			<p><code>transition: background 0.5s linear;</code></p>
+
+			<p>In this case we’re telling the browser that a transition of the background property, will take half a second, and use the “linear” timing function.</p>
+
+			<p>The above property might cause a button’s background to change when hovered over:</p>
+
+			<p><code>button { <br>
+  background: white;<br>
+  transition: background 0.5s linear;<br>
+}<br>
+<br>
+button:hover {<br>
+  background: green;<br>
+}</code></p>
+
+			<p> Notice the transition property to the first button reference in the CSS state. This tells the browser to apply a transition to any change of state such as on hover as well as when changing back from the hover state.</p>
+
+			<p>If we applied the transition property to the hover state only, it would only transition to the hover state but not back.</p>
+
+			<p>Let’s see how this looks in action. I’ve set up a couple of demos. You might find these examples contain some code that isn’t obvious. I’ll be going into greater detail over the next few days, but do feel free to poke around at the values to see what happens.</p>
+
+			<h3>Example: Button transition</h3>
+
+			<img class="center" alt="list animation gif" src="images/chapter4/01.gif " style="margin-bottom: 0;">
+
+	 	 <p><a href="http://codepen.io/donovanh/pen/MYQdZd">Here’s a CodePen</a> demonstrating the hover effect. In CodePen, you can make changes to the HTML and CSS and see the results immediately.<p>
+
+			<p>The important thing to look for is the any property beginning transition-. I’ve written them out long-hand for demonstration like so:</p>
+
+			<p><code>
+				transition-property: all;<br>
+				transition-duration: 0.4s;<br>
+				transition-timing-function: ease-out;<br>
+			</code></p>
+
+			<p>This code that tells the browser what sort of movement to generate between the non-hover state and the hover state. It tells the browser to animate all properties (colours, size, position), over a duration of 0.4 seconds.</p>
+
+			<p>Try changing some of these values. For example, change the “0.4s” to something longer, like “2s” (two seconds). How does the animation feel? You could change the property from “all” to “background”.</p>
+
+			<p>For a fun effect, try changing the transition-timing-function value from ease-out to:</p>
+
+			<p><code>transition-timing-function: cubic-bezier(.59,-0.26,.33,1.42)</code></p>
+
+			<p>The cubic bezier timing function is a lot of fun. We’ll cover timing functions in more detail on another day.</p>
+
+			<h3>Homework</h3>
+
+			<p>Edit the button in today’s example and add your own ideas. You could try changing the shape, border, or almost any property. Have some fun, the goal is to make sure you’re familiar with how a transition affects the element’s hover effect.</p>
+
+			<p>For some inspiration check out <a href="https://codepen.io/nxtonic/pen/gbZNKJ">this awesome hover style.</a> There are loads of great examples around if you are looking for ideas.</p>
+
+			<p>If you want to go further, try creating a new CodePen with an element that changes from one thing to another on hover. See if you can have an element within it move at a different rate. Don’t worry if you haven’t got to this point yet, we’ll cover the properties in more detail.</p>
 		</section>
+
 
 		<footer>
 
