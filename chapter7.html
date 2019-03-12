@@ -46,7 +46,96 @@ end navigation
 		</header>
 
 		<section class="content">
-			<div class="placeholder" style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/Ozf9DBfaBGT8Q" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/not-today-satan-Ozf9DBfaBGT8Q">via GIPHY</a></p>
+			<h2>Multiple transitions</h2>
+
+			<p>So far we’ve covered how a transition creates the movement between one state and another. Next we’ll see what happens when we apply a single transition to an element with multiple changes, and how to use multiple transitions together to subtly improve our animation.</p>
+
+			<h3>Example 1: Fancy button</h3>
+			<p>While we’ve seen a simple button hover effect already, we can combine multiple transitions into a single button for a more interesting effect.
+			</p>
+
+			<img class="center" alt="baymax face animation gif" src="images/chapter7/1.gif" >
+
+			<p>In <a href="https://codepen.io/fordjoe/pen/eXGeOY">this example</a> a hover effect combines several changes of state, but all are defined by a single transition:
+			</p>
+
+			<p><code>transition: transform 0.4s cubic-bezier(.72,-0.61,.25,1.51);</code></p>
+
+			<p>Here’s how it works. The button is made up of two icons and two pieces of text. The initial (non-hover) state is that the “Follow me” text and Twitter icon are positioned inside the button. I position the @ symbol and the “cssanimation” text outside the button like so:</p>
+
+			<img class="center" alt="baymax face animation gif" src="images/chapter7/2.png" >
+
+			<p>Then I add a hover state, in which the elements outside the button are positioned inside the button, like so:
+			</p>
+
+			<img class="center" alt="baymax face animation gif" src="images/chapter7/3.png" >
+
+			<p>This is done using CSS transforms. For example, the Twitter symbol is positioned using absolute positioning. When setting it up I positioned it where I wanted using left and top values:</p>
+
+			<p><code>.icon { <br>
+  position: absolute;<br>
+  left: 0.75em;<br>
+  top: 0.75em;<br>
+}</code></p>
+
+			<p>Then I add a hover state for the button and position the Twitter icon outside the button with a transform:</p>
+
+			<p><code>a:hover .icon { <br>
+    transform: translateY(3em);<br>
+}</code></p>
+
+
+			<p>Adding <code>overflow: hidden</code> to the container means that elements outside the button won’t show.</p>
+
+			<p>With no transition in place, the icon would suddenly disappear. Since each of these elements inside the button is a span, I can apply the transition to them all at once:</p>
+
+			<p><code>span { <br>
+  transition: transform 0.4s <br> cubic-bezier(.72,
+&ndash;0.61,.25,1.51);<br>
+}</code></p>
+
+<p>This now means that any span elements will be transitioned if their state changes, such as on hover. The same trick is applied to the other parts of the button.</p>
+
+<p>You can <a href="https://codepen.io/fordjoe/pen/qvPVbr">see this example in full on CodePen.</a></p>
+
+				<h3>Example 2: Background Reveal</h3>
+
+				<p>In this example I’ve set up a card containing some text, and show the text on hover.</p>
+
+				<img class="center" alt="background reveal example gif" src="images/chapter7/4.gif" >
+
+				<p>The initial (non-hover) state of the card has the title showing but the paragraph text has an opacity of zero. On hover, we change that to 1 to show the text, and change the height of the text container.</p>
+
+				<p>Without transitions, it looks like <a href="https://codepen.io/fordjoe/pen/RdLjGM?editors=110">this</a>. When we hover over the card the change is sudden.</p>
+
+			<p>With the addition two transitions to change the mood entirely. <a href="https://codepen.io/fordjoe/pen/qvPVqm">Here’s the result.</a></p>
+
+			<p>The first transition (written short-hand this time) looks like this:</p>
+
+			<p><code>transition: all 0.5s cubic-bezier(.48,-0.28,.41,1.4);</code></p>
+
+			<p>This tells the browser to animate all properties over a duration of 0.5 seconds and uses the <code>cubic-bezier</code> transition to give it some bounce. It affects the height of the text container in this case.
+			</p>
+
+			<p>The second transition makes the text move. Here a <code>ease-out</code> timing function is used:</p>
+
+			<p>transition: all 0.4s ease-out;</p>
+
+			<p>There’s a lot that we can achieve by changing states on hover. In this example the <code>info</code> div’s height and the paragraph are both give new values within the <code>.card:hover</code> state.</p>
+
+			<p>In this example we use two transitions so that each of the moving parts moves in a different way. Having elements move at different paces can really help add appeal to a transition.</p>
+
+
+
+			<h3>Homework</h3>
+
+			<p>In this chapter we looked at how multiple effects could be handled by a single transition, and how multiple transitions can be used together.</p>
+
+			<p>Can you think of ways these sorts of transitions might help in a project you’re currently working on?</p>
+
+			<p>We’ve covered a lot so far. Next we’ll take a look at how we can apply these transitions using JavaScript.</p>
+
+
 
 		</section>
 
